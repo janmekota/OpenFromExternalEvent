@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Open from External Event" url="http://cbos.github.io/OpenFromExternalEvent/update">
+      With the Open from External Event feature you can do similar things as with Open from Clipboard feature of Eclipse, but now the data is coming from an enternal source.
+   </description>
+   <feature url="features/org.eclipse.jdt.productivity.openfromexternalevent_1.0.0.201403052129.jar" id="org.eclipse.jdt.productivity.openfromexternalevent" version="1.0.0.201403052129"/>
+</site>

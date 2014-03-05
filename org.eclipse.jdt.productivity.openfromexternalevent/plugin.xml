@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            name="Open from External Event"
+            class="org.eclipse.jdt.productivity.openfromexternalevent.preferences.PreferencesPage"
+            id="org.eclipse.jdt.productivity.openfromexternalevent.preferences.PreferencesPage">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.eclipse.jdt.productivity.openfromexternalevent.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   
+   <extension
+		name="Open from External Event"
+       	point="org.eclipse.ui.startup">
+    	<startup
+        	class="org.eclipse.jdt.productivity.openfromexternalevent.Activator$EarlyStartup"/>
+ 	</extension>
+
+</plugin>

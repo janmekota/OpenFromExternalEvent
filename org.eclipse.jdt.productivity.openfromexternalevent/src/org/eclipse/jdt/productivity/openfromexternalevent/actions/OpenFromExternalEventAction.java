@@ -25,7 +25,6 @@ import org.eclipse.jdt.core.search.TypeNameMatch;
 import org.eclipse.jdt.core.search.TypeNameMatchRequestor;
 import org.eclipse.jdt.internal.debug.ui.IJDIPreferencesConstants;
 import org.eclipse.jdt.internal.debug.ui.JDIDebugUIPlugin;
-import org.eclipse.jdt.internal.debug.ui.actions.ActionMessages;
 import org.eclipse.jdt.internal.debug.ui.console.JavaStackTraceConsole;
 import org.eclipse.jdt.internal.debug.ui.console.JavaStackTraceConsoleFactory;
 import org.eclipse.jdt.ui.JavaElementLabelProvider;
@@ -162,7 +161,13 @@ public class OpenFromExternalEventAction implements IWorkbenchWindowActionDelega
 
 	private static final int METHOD_JAVADOC_REFERENCE = 9;
 
-	private static final String TASK_NAME = ActionMessages.OpenFromClipboardAction_OpeningFromClipboard;
+	private static final String TASK_NAME = "Opening from External Event...";
+
+	private static final String TITLE = "Opening from External Event";
+
+	private static final String ElementToOpen = "&External event content could not be opened, refine it and try again:";
+
+	private static final String SelectOrEnterTheElementToOpen = "Select or enter the element to open:";
 
 	private String m_inputText;
 
@@ -543,8 +548,8 @@ public class OpenFromExternalEventAction implements IWorkbenchWindowActionDelega
 					return DialogSettings.getOrCreateSection(settings, "OpenFromClipboardAction_dialogBounds"); //$NON-NLS-1$
 				}
 			};
-			dialog.setTitle(ActionMessages.OpenFromClipboardAction_OpenFromClipboard);
-			dialog.setMessage(ActionMessages.OpenFromClipboardAction_SelectOrEnterTheElementToOpen);
+			dialog.setTitle(TITLE);
+			dialog.setMessage(SelectOrEnterTheElementToOpen);
 			dialog.setElements(matches.toArray());
 			dialog.setMultipleSelection(true);
 
@@ -669,11 +674,7 @@ public class OpenFromExternalEventAction implements IWorkbenchWindowActionDelega
 				return newText.length() == 0 ? "" : null; //$NON-NLS-1$
 			}
 		};
-		InputDialog dialog = new InputDialog(window.getShell(),
-																				 ActionMessages.OpenFromClipboardAction_OpenFromClipboard,
-																				 ActionMessages.OpenFromClipboardAction_ElementToOpen,
-																				 inputText,
-																				 validator);
+		InputDialog dialog = new InputDialog(window.getShell(), TITLE, ElementToOpen, inputText, validator);
 		int result = dialog.open();
 		if (result != IDialogConstants.OK_ID)
 		{

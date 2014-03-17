@@ -14,15 +14,15 @@ It's really quite simple. Eclipse will listen on a port locally on the client ma
 
 Tries to **open the matching** Java element in the editor if the clipboard contains a **single line**. **Otherwise** it opens the contents in the **Java Stack Trace Console**. Examples:
 
->  java.lang.String
->  String
->  String#getBytes
->  String.getBytes
->  java.lang.String.getBytes(String)
->  String.java:123
->  at java.lang.String.matches(String.java:1550)
->  java.lang.String.valueOf(char) line: 1456
->  currentTimeMillis()
+    java.lang.String
+    String
+    String#getBytes
+    String.getBytes
+    java.lang.String.getBytes(String)
+    String.java:123
+    at java.lang.String.matches(String.java:1550)
+    java.lang.String.valueOf(char) line: 1456
+    currentTimeMillis()
 
 ## Plugin installation
 

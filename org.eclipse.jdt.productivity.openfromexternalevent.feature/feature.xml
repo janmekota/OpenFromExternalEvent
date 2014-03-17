@@ -2,18 +2,20 @@
 <feature
       id="org.eclipse.jdt.productivity.openfromexternalevent"
       label="Open from External Event"
-      version="1.0.0.qualifier">
+      version="1.0.1.qualifier">
 
-   <description url="https://github.com/cbos/OpenFromExternalEvent">
-      With the Open from External Event feature you can do similar things as with Open from Clipboard feature of Eclipse, but now the data is coming from an enternal source
+   <description url="http://cbos.github.io/OpenFromExternalEvent/">
+      With the Open from External Event feature you can do similar
+things as with Open from Clipboard feature of Eclipse, but now
+the data is coming from an enternal source
    </description>
 
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
+   <copyright url="http://cbos.github.io/OpenFromExternalEvent/">
+      No copyright
    </copyright>
 
-   <license url="http://www.example.com/license">
-      [Enter License Description here.]
+   <license url="http://cbos.github.io/OpenFromExternalEvent/">
+      No license
    </license>
 
    <plugin

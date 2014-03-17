@@ -20,6 +20,7 @@ public class ExternalEventHandlingServlet extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+		addAllowCrossOriginRequests(response);
 		response.setContentType("text/html;charset=utf-8");
 		response.setStatus(HttpServletResponse.SC_OK);
 		response.getWriter()
@@ -29,6 +30,7 @@ public class ExternalEventHandlingServlet extends HttpServlet
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+		addAllowCrossOriginRequests(response);
 		IconServlet.writeIcon(response);
 		if (request.getContentLength() > 0)
 		{
@@ -39,6 +41,12 @@ public class ExternalEventHandlingServlet extends HttpServlet
 			}
 			bringEclipseToFront();
 		}
+	}
+
+	private void addAllowCrossOriginRequests(HttpServletResponse response)
+	{
+		response.addHeader("Access-Control-Allow-Origin", "*");
+		response.addHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
 	}
 
 	private void bringEclipseToFront()

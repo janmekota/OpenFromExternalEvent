@@ -1,8 +1,9 @@
-OpenFromExternalEvent
+Open from External Event
 =====================
 
 Eclipse plugin which can handle external event and open files or show a stacktrace.
 This feature is inspired by 2 features:
+
 * the Direct Click Through feature of the Atlassian Connector
 * Eclipse [Open from Clipboard feature][1]
 

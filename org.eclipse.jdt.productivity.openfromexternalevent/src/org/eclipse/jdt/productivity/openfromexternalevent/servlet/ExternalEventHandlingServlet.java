@@ -43,10 +43,19 @@ public class ExternalEventHandlingServlet extends HttpServlet
 		}
 	}
 
+	@Override
+	protected void doOptions(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+																																										IOException
+	{
+		addAllowCrossOriginRequests(response);
+		super.doOptions(request, response);
+	}
+
 	private void addAllowCrossOriginRequests(HttpServletResponse response)
 	{
 		response.addHeader("Access-Control-Allow-Origin", "*");
 		response.addHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+		response.addHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	}
 
 	private void bringEclipseToFront()

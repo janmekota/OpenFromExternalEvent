@@ -359,8 +359,12 @@ public class OpenFromExternalEventAction implements IWorkbenchWindowActionDelega
 			int index2 = s.indexOf(')');
 			String typeLine = s.substring(index1 + 1, index2).trim();
 			int index = typeLine.indexOf(':');
-			String lineNumber = typeLine.substring(index + 1, typeLine.length()).trim();
-			int line = (Integer.valueOf(lineNumber)).intValue();
+			int line = 1;
+			if (index > 0) //writeBytes(Native Method) gives index -1
+			{
+				String lineNumber = typeLine.substring(index + 1, typeLine.length()).trim();
+				line = (Integer.valueOf(lineNumber)).intValue();
+			}
 
 			Pattern pattern = Pattern.compile(STRICT_QUALIFIED_NAME_PATTERN + WS + "\\("); //$NON-NLS-1$
 			Matcher matcher = pattern.matcher(s);

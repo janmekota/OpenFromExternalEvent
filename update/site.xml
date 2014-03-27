@@ -9,5 +9,8 @@
    <feature url="features/org.eclipse.jdt.productivity.openfromexternalevent_1.0.3.201403261435.jar" id="org.eclipse.jdt.productivity.openfromexternalevent" version="1.0.3.201403261435">
       <category name="OpenFromExternalEvent"/>
    </feature>
+   <feature url="features/org.eclipse.jdt.productivity.openfromexternalevent_1.0.4.201403271041.jar" id="org.eclipse.jdt.productivity.openfromexternalevent" version="1.0.4.201403271041">
+      <category name="OpenFromExternalEvent"/>
+   </feature>
    <category-def name="OpenFromExternalEvent" label="Open from External Event"/>
 </site>

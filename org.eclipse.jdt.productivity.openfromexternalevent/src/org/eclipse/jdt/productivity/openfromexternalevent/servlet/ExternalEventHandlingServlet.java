@@ -37,7 +37,9 @@ public class ExternalEventHandlingServlet extends HttpServlet
 			try (InputStream in = request.getInputStream())
 			{
 				final String input = streamToString(in);
-				asyncExecute(new OpenFromExternalEventRunnable(input));
+
+				String inputWithOSSpecificNewlines = input.replace("\n", System.lineSeparator());
+				asyncExecute(new OpenFromExternalEventRunnable(inputWithOSSpecificNewlines));
 			}
 			bringEclipseToFront();
 		}

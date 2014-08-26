@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.jdt.productivity.openfromexternalevent"
       label="Open from External Event"
-      version="1.0.5.qualifier">
+      version="1.0.6.qualifier">
 
    <description url="http://cbos.github.io/OpenFromExternalEvent/">
       With the Open from External Event feature you can do similar

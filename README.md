@@ -25,6 +25,10 @@ Tries to **open the matching** Java element in the editor if the clipboard conta
     java.lang.String.valueOf(char) line: 1456
     currentTimeMillis()
 
+## Where is it used from?
+ * [Jenkins plugin][2] 
+ * [AnalysisDashboard][3] 
+ 
 ## Plugin installation
 
 To install the Eclipse plugin:
@@ -41,3 +45,5 @@ To install the Eclipse plugin:
 
 
   [1]: http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.jdt.doc.user/reference/ref-menu-navigate.htm
+  [2]: https://wiki.jenkins-ci.org/display/JENKINS/Send+stacktrace+to+eclipse+plugin
+  [3]: https://github.com/cbos/AnalysisDashboard

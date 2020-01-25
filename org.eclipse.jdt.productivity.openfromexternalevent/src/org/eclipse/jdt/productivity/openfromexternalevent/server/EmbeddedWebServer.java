@@ -2,9 +2,7 @@ package org.eclipse.jdt.productivity.openfromexternalevent.server;
 
 import org.eclipse.jdt.productivity.openfromexternalevent.servlet.ExternalEventHandlingServlet;
 import org.eclipse.jdt.productivity.openfromexternalevent.servlet.IconServlet;
-import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.bio.SocketConnector;
 import org.eclipse.jetty.servlet.ServletHandler;
 
 public class EmbeddedWebServer
@@ -15,11 +13,7 @@ public class EmbeddedWebServer
 	public void startServer(int portNumber) throws Exception
 	{
 		stop();
-		m_server = new Server();
-		Connector connector = new SocketConnector();
-		connector.setHost("127.0.0.1");
-		connector.setPort(portNumber);
-		m_server.addConnector(connector);
+		m_server = new Server(portNumber);
 
 		ServletHandler handler = new ServletHandler();
 		m_server.setHandler(handler);
